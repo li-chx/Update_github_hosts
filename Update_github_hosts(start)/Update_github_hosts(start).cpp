@@ -1,16 +1,15 @@
+#pragma comment(linker, "/SUBSYSTEM:WINDOWS")
+#pragma comment(linker, "/ENTRY:mainCRTStartup")
 #include <curl/curl.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include "copy.c"
 #include "read.c"
-int main(int argc, char* argv[]) 
+int main(int argc, char* argv[])
 {
-    char x;
     read();
     printf("Are you sure you want to delete this hosts file?\n");
-    x = getchar();
     printf("This is the last caution!\n");
-    x = getchar();
     remove("hosts");
     copy();
     errno_t err = 1;
@@ -26,7 +25,7 @@ int main(int argc, char* argv[])
     CURL* curl = nullptr;
     CURLcode res;
     curl = curl_easy_init();
-    if (curl != nullptr) 
+    if (curl != nullptr)
     {
 
         curl_easy_setopt(curl, CURLOPT_URL, "https://raw.hellogithub.com/hosts");
@@ -46,8 +45,6 @@ int main(int argc, char* argv[])
     }
     fclose(fp);
     printf("This is the new hosts file");
-    x = getchar();
     read();
-    x = getchar();
     return 0;
 }

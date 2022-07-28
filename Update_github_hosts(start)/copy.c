@@ -2,7 +2,7 @@
 #include <stdlib.h>
 int copy()
 {
-    FILE* fp  = NULL;
+    FILE* fp = NULL;
     FILE* fp1 = NULL;
     char ch;
     errno_t err = 1;
@@ -18,7 +18,7 @@ int copy()
         printf("无法打开此文件2\n");            //如果打不开，就输出打不开
         exit(0);                               //终止程序
     }
-    while ((ch = fgetc(fp)) != EOF) 
+    while ((ch = fgetc(fp)) != EOF)
     {
         putchar(ch);
         fputc(ch, fp1);
