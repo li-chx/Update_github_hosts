@@ -45,6 +45,7 @@ int main(int argc, char* argv[])
         curl_easy_cleanup(curl);
     }
     fclose(fp);
+    system("ipconfig /flushdns");
     printf("This is the new hosts file");
     x = getchar();
     read();

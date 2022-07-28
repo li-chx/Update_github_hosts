@@ -1,5 +1,4 @@
-#pragma comment(linker, "/SUBSYSTEM:WINDOWS")
-#pragma comment(linker, "/ENTRY:mainCRTStartup")
+#pragma comment( linker, "/subsystem:windows /entry:mainCRTStartup" )
 #include <curl/curl.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -46,5 +45,6 @@ int main(int argc, char* argv[])
     fclose(fp);
     printf("This is the new hosts file");
     read();
+    system("ipconfig /flushdns");
     return 0;
 }
