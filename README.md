@@ -1,7 +1,7 @@
 # Update_github_hosts
 ## 一、介绍
 **该软件仅用于windows**  
-这是一个基于https://github.com/521xueweihan/GitHub520的github hosts自动化更新程序。（指自动获取hosts内容并写入系统hosts文件）
+这是一个基于https://github.com/521xueweihan/GitHub520 的github hosts自动化更新程序。（指自动获取hosts内容并写入系统hosts文件）
 ## 二、使用方法
 ### 手动使用
 1. 首先应备份你的hosts文件，hosts文件位于C:\Windows\System32\drivers\etc  
